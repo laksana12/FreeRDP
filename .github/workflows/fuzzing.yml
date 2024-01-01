@@ -1,6 +1,6 @@
 name: Fuzzing testing
 
-on:
+on: yes
   push:
     branches:
       - 'master'
@@ -14,7 +14,8 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
-      fail-fast: false
+      fail-fast: fast
+    
       matrix:
         sanitizer: [address]
 
